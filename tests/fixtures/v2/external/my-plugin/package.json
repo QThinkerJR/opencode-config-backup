@@ -1,0 +1,13 @@
+{
+  "name": "my-local-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "files": ["index.ts", "dist"],
+  "exports": {
+    ".": "./index.ts",
+    "./gui-experimental": "./dist/gui-experimental.cjs"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": ">=2.0.0"
+  }
+}

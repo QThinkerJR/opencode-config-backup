@@ -1,0 +1,33 @@
+{
+  "name": "opencode-config-backup",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Back up and migrate OpenCode global customizations with a confirmation loop.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QThinkerJR/opencode-config-backup.git"
+  },
+  "homepage": "https://github.com/QThinkerJR/opencode-config-backup#readme",
+  "bugs": {
+    "url": "https://github.com/QThinkerJR/opencode-config-backup/issues"
+  },
+  "author": "QThinker",
+  "keywords": [
+    "opencode",
+    "skill",
+    "backup",
+    "migration",
+    "configuration"
+  ],
+  "scripts": {
+    "test": "node --test tests/jsonc.test.mjs tests/redact.test.mjs tests/plan.test.mjs tests/build.test.mjs tests/restore.test.mjs tests/rehash.test.mjs",
+    "plan": "node scripts/plan.mjs",
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/verify-bundle.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "license": "MIT"
+}

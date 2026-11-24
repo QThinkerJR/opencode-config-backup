@@ -1,0 +1,87 @@
+{
+  // V2 fixture with comments and trailing commas.
+  "plugins": [
+    "some-npm-plugin@1.2.3",
+    "../external/my-plugin",
+    {
+      "package": "other-plugin",
+      "options": {
+        "apiKey": "{env:OTHER_KEY}",
+        "clientSecret": "literal-option-secret-1234567890",
+        "mode": "fast",
+      },
+    },
+    "-disabled-plugin",
+    "*",
+  ],
+  "mcp": {
+    "servers": {
+      "npm-mcp": {
+        "type": "local",
+        "command": ["cmd", "/c", "npx", "-y", "@example/mcp@latest"],
+        "disabled": true,
+      },
+      "remote": {
+        "type": "remote",
+        "url": "https://example.com/mcp",
+        "headers": {
+          "Authorization": "Bearer {env:MCP_KEY}",
+        },
+      },
+      "managed": {
+        "type": "local",
+        "command": ["C:/Users/me/.cache/opencode/bin/helper.exe", "mcp"],
+        "cwd": "C:/Users/me",
+      },
+      "bare": {
+        "type": "local",
+        "command": ["example-tool", "serve", "--mcp"],
+        "environment": {
+          "LOG_LEVEL": "info",
+          "MCP_TOKEN": "literal-secret-token-value-1234567890",
+          "TOKEN": "literal-bare-token",
+        },
+      },
+      "toolbox": {
+        "type": "local",
+        "command": ["C:/Users/me/AppData/Local/uvx.exe", "example-tool", "attach"],
+        "enabled": false,
+      },
+      "manualabs": {
+        "type": "local",
+        "command": ["C:/Users/me/AppData/Local/pythonw.exe", "-c", "print(1)"],
+        "enabled": true,
+      },
+      "secure": {
+        "type": "local",
+        "command": ["npx", "--api-key", "literal-command-secret-1234567890", "secure-mcp"],
+        "disabled": true,
+      },
+    },
+  },
+  "agents": {
+    "reviewer": {
+      "mode": "subagent",
+      "system": "Review only.",
+    },
+  },
+  "commands": {
+    "audit": {
+      "template": "Audit $ARGUMENTS.",
+    },
+  },
+  "skills": ["./extra-skills", "https://example.com/skills/"],
+  "instructions": ["~/rules/opencode.md", "https://example.com/instructions.md"],
+  "references": {
+    "docs": "../docs",
+    "effect": { "repository": "Effect-TS/effect", "branch": "main" },
+  },
+  "providers": {
+    "acme": {
+      "env": ["ACME_API_KEY"],
+      "settings": {
+        "apiKey": "literal-provider-key-1234567890",
+      },
+    },
+  },
+}

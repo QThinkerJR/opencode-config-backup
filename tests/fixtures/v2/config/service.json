@@ -1,0 +1,7 @@
+{
+  "remoteAccepted": true,
+  "password": "must-not-be-copied",
+  "remote": {
+    "route": "machine-specific-route"
+  }
+}

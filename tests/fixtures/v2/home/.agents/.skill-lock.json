@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "skills": {
+    "demo": {
+      "source": "local",
+      "sourceType": "local",
+      "sourceUrl": null,
+      "skillPath": "demo",
+      "pluginName": "demo"
+    }
+  }
+}

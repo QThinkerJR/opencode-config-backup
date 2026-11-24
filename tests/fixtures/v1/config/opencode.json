@@ -1,0 +1,29 @@
+{
+  "plugin": [
+    "v1-plugin@1.0.0",
+    "../external/v1-local"
+  ],
+  "mcp": {
+    "npm-mcp": {
+      "type": "local",
+      "command": ["npx", "@example/mcp"],
+      "enabled": false
+    }
+  },
+  "agent": {
+    "reviewer": {
+      "prompt": "Review only.",
+      "disable": false
+    }
+  },
+  "command": {
+    "review": {
+      "template": "Review $ARGUMENTS.",
+      "subtask": true
+    }
+  },
+  "skills": {
+    "paths": ["./v1-extra"],
+    "urls": ["https://example.com/v1-skills/"]
+  }
+}

@@ -1,0 +1,23 @@
+node_modules/
+coverage/
+.tmp/
+opencode-migration-*/
+opencode-backup-*/
+*.zip
+.DS_Store
+Thumbs.db
+
+# Local credentials and key material
+.env
+.env.*
+!.env.example
+!tests/fixtures/**/.env
+!tests/fixtures/**/.env.*
+.npmrc
+.netrc
+.git-credentials
+.pypirc
+*.pem
+*.key
+*.p12
+*.pfx

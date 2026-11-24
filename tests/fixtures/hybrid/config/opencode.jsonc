@@ -1,0 +1,16 @@
+{
+  "agent": {
+    "build": {
+      "disable": true
+    }
+  },
+  "mcp": {
+    "servers": {
+      "modern": {
+        "type": "remote",
+        "url": "https://example.com/mcp"
+      }
+    }
+  },
+  "plugins": ["jsonc-plugin"]
+}

@@ -1,0 +1,10 @@
+{
+  "mcp": {
+    "legacy": {
+      "type": "local",
+      "command": ["npx", "legacy-mcp"],
+      "enabled": true
+    }
+  },
+  "plugins": ["json-plugin"]
+}
